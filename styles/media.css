@@ -290,6 +290,11 @@
                 grid-template-columns: 1fr;
             }
             /* News page */
+            /* News detail page */
+            .news_detail-content {
+                grid-template-columns: 100%;
+            }
+            /* News detail page */
         }
         
         @media (max-width: 950px) {
@@ -550,4 +555,9 @@
                 padding: 100px 10px 100px;
             }
             /* /News page */
+            /* News detail page */
+            .news_detail-slider_nav {
+                display: none;
+            }
+            /* /News detail page */
         }

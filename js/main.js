@@ -330,4 +330,31 @@ $(document).ready(function() {
         $(`.surveys_tab[data-tab="${tab}"]`).addClass('active');
     });
 
+    //Инициализация галереи на странице новости
+    $('.news_detail-slider').owlCarousel({
+        loop: true,
+        nav: false,
+        dots: false,
+        navText: ['', ''],
+        margin: 30,
+        navContainer: ".news_detail-slider_nav",
+        responsive: {
+            0: {
+                items: 1
+            },
+            1300: {
+                items: 2
+            }
+        }
+    });
+
+    //переключение табов на странице опросов
+    $('.information_menu-tab li').click(function() {
+        const tab = $(this).data('tab');
+        $('.information_menu-tab li').removeClass('active');
+        $(this).addClass('active');
+        $('.information_tab').removeClass('active');
+        $(`.information_tab[data-tab="${tab}"]`).addClass('active');
+    });
+
 });
